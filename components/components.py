@@ -10,11 +10,11 @@ class WebElement:
         self.locator_type = locator_type
 
 
-    def click(self, i=1):
+    def click(self):
         '''click the element'''
-        for x in range(i):
-            self.find_element().click()
-        self.driver.find_element(self.get_by_type(), self.locator).click()
+        self.find_element().click()
+        #self.driver.find_element(self.get_by_type(), self.locator).click()
+
 
     def find_element(self):
         return self.driver.find_element(self.get_by_type(), self.locator)

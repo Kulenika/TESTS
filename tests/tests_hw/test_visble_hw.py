@@ -7,7 +7,7 @@ def test_visible_accordion(browser):
     assert accordion_page.text_element1.visible()
     accordion_page.text_element2.click()
     time.sleep(2)
-    assert not accordion_page.text_element1.visible()
+    assert not accordion_page.text_element2.visible()
 
 def test_visible_accordion_default(browser):
     accordion_page = Accordion(browser)
