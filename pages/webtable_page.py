@@ -24,6 +24,22 @@ class WebTables(BasePage):
         self.previous_button = WebElement(driver, 'div > div.-previous > button')
         self.next_button = WebElement(driver, 'div > div.-next > button')
         self.jump_to_page = WebElement(driver, 'span.-pageInfo > div > input[type=number]')
+        self.last_name_click = WebElement(driver, 'div > div:nth-child(2) > div.rt-resizable-header-content')
+        self.first_name_click = WebElement(driver, 'div > div:nth-child(1) > div.rt-resizable-header-content')
+        self.age_click = WebElement(driver, 'div > div:nth-child(3) > div.rt-resizable-header-content')
+        self.email_click = WebElement(driver, 'div > div:nth-child(4) > div.rt-resizable-header-content')
+        self.salary_click = WebElement(driver, 'div > div:nth-child(5) > div.rt-resizable-header-content')
+        self.department_click = WebElement(driver, 'div > div:nth-child(6) > div.rt-resizable-header-content')
+        self.first_name_check = WebElement(driver, 'div:nth-child(4) > div > div:nth-child(1)')
+        self.last_name_check = WebElement(driver, 'div:nth-child(4) > div > div:nth-child(2)')
+        self.age_check = WebElement(driver, 'div:nth-child(4) > div > div:nth-child(3)')
+        self.email_check = WebElement(driver, 'div:nth-child(4) > div > div:nth-child(4)')
+        self.salary_check = WebElement(driver, 'div:nth-child(4) > div > div:nth-child(5)')
+        self.department_check = WebElement(driver, 'div:nth-child(4) > div > div:nth-child(6)')
+
+
+
+
 
 
 

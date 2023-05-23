@@ -21,7 +21,12 @@ def test_web_tables(browser):
     time.sleep(3)
     web_tables.submit_button.click()
     assert not web_tables.modal_window.exist()
-    #как написать проверку, что новая запись добавлена в таблицу?
+    assert web_tables.first_name_check.get_text() == 'Anna'
+    assert web_tables.last_name_check.get_text() == 'Kulevova'
+    assert web_tables.age_check.get_text() == '22'
+    assert web_tables.email_check.get_text() == 'zizizi@mail.ru'
+    assert web_tables.salary_check.get_text() == '5000'
+    assert web_tables.department_check.get_text() == 'Legal'
     web_tables.edit_4_button.click()
     assert web_tables.modal_window.exist()
     time.sleep(3)
@@ -35,10 +40,15 @@ def test_web_tables(browser):
     web_tables.first_name_mw.send_keys('Sandra')
     web_tables.submit_button.click()
     time.sleep(3)
-    # как написать проверку, что обновились данные в таблице?
+    assert web_tables.first_name_check.get_text() == 'Sandra'
     web_tables.delete4_btn.click()
     time.sleep(4)
-    #как проверить, что записи больше нет?
+    assert not web_tables.first_name_check.get_text() == 'Sandra'
+    assert not web_tables.last_name_check.get_text() == 'Kulevova'
+    assert not web_tables.age_check.get_text() == '22'
+    assert not web_tables.email_check.get_text() == 'zizizi@mail.ru'
+    assert not web_tables.salary_check.get_text() == '5000'
+    assert not web_tables.department_check.get_text() == 'Legal'
 
 
 def test_web_tables_2(browser):
