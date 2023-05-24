@@ -6,9 +6,6 @@ class Herokuapp2(BasePage):
         super().__init__(driver, self.base_url)
         self.add_element = WebElement(driver, '#content > div > button')
         self.delete_btn = WebElement(driver, '#elements > button:nth-child(1)')
-        self.delete_btn1 = WebElement(driver, '//*[@id="elements"]/button[1]')
-        self.delete_btn2 = WebElement(driver, '//*[@id="elements"]/button[2]')
-        self.delete_btn3 = WebElement(driver, '//*[@id="elements"]/button[3]')
-        self.delete_btn4 = WebElement(driver, '//*[@id="elements"]/button[4]')
+
 
 
